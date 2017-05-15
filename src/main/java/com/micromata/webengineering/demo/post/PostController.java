@@ -16,7 +16,7 @@ public class PostController {
     private PostService postService;
 
     @RequestMapping("/post")
-    public List<String> getPostList() {
+    public List<PojoPost> getPostList() {
         return postService.getPosts();
     }
 

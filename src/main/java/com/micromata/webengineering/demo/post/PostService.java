@@ -1,23 +1,25 @@
 package com.micromata.webengineering.demo.post;
 
+import org.hibernate.validator.constraints.br.TituloEleitoral;
 import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Date;
 
 /**
  * Handle all CRUD operations for posts.
  */
 @Service
 public class PostService {
-    private List<String> posts = new LinkedList<>();
+    private List<PojoPost> posts = new LinkedList<>();
 
     /**
      * Retrieve the list of all posts.
      *
      * @return post list
      */
-    public List<String> getPosts() {
+    public List<PojoPost> getPosts() {
         return posts;
     }
 
@@ -28,6 +30,9 @@ public class PostService {
      * @param title the post title.
      */
     public void addPost(String title) {
-        posts.add(title);
+        PojoPost p = new PojoPost();
+        p.setTitelProperty(title);
+        p.setDateProperty(new Date());
+        posts.add(p);
     }
 }
