@@ -2,3 +2,7 @@
 *.iml
 .idea/
 target
+.classpath
+.project
+.settings
+test.mv.db
