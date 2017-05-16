@@ -1,4 +1,6 @@
 *.pptx
 *.iml
 .idea/
+.settings
+.classpath
 target
